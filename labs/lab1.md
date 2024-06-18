@@ -12,6 +12,36 @@ public void add (int a, int b)
   - `add(10.5, 20.1)` returns 30.6
   - `add(“Hello”,20)` returns “Hello 20”
 
+    public class Add {
+    int add(int a,int b){
+        return a+b;
+    }
+    int add(int a,int b,int c){
+        return a+b+c;
+    }
+    double add(double a,double b){
+        return a+b;
+    }
+    String add(String a,int b){
+        return a +""+ b;
+    }
+
+    public static void main(String[] args) {
+        Add val=new Add();
+        int result1=val.add(10,20);
+        int result2=val.add(10,20,30);
+        double result3=val.add(10.5,20.1);
+        String result4=val.add("Hello",20);
+        System.out.println("result of adding two numbers: "+result1);
+        System.out.println("result of adding three numbers: "+result2);
+        System.out.println("result of adding double numbers: "+result3);
+        System.out.println("result of adding(\"Hello\" ,20) : " +  result4);
+
+    }
+
+}
+
+
 2) Define a class Student with the following attributes
   - studentId of type integer
   - studentName of type String
@@ -41,6 +71,19 @@ For the following assignments create an exclusive class called Tester which cont
 <br> ...
 <br> 2 x 10 = 20
 
+ public class Multiplication {
+    public static void displayMultiplicationFor(int num) {
+        for (int i = 1; i <= 10; i++) {
+            int result = num * i;
+            System.out.println(num + "*" + i + "=" + result);
+        }
+    }
+    public static void main(String[] args) {
+        int num=2;
+        displayMultiplicationFor(num);
+    }
+}
+
 4) Write a method which accepts a string as parameter and returns the number of words in it. For example, if the string is "Sum of 12 and 20 is 32", the method should return 4.
 
 5) Create a program with methods to test the functionality of the various methods of the String class
@@ -56,7 +99,29 @@ For the following assignments create an exclusive class called Tester which cont
   - tolowercase
   - touppercase
   - trim
+
  
+public class Stringmethods {
+    public static void main(String[] args) {
+        String str="Hi, Welcome to Ascendion";
+        String str1="Hello World";
+        char Index=str.charAt(5);
+        System.out.println(Index);
+        boolean Word=str.contains("to");
+        System.out.println(Word);
+        int size=str.length();
+        System.out.println(size);
+        int comma=str.indexOf(',');
+        System.out.println(comma);
+        boolean isEqual=str.equals(str1);
+        System.out.println(isEqual);
+        boolean isEqualIgnore=str.equalsIgnoreCase(str1);
+        System.out.println(isEqualIgnore);
+        String joined=String.join("-","hyd","vskp");
+        System.out.println(joined);
+        
+    }
+}
 6) Define a class ArrayStore which contains an integer array as its instance variable. Create necessary methods for the following operations.
   - Accept 10 integers and store them into the array.
   - Display the elements of the array using while & for loops
